@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>app</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* 天空蓝 */
+            color: #00008b; /* 深蓝色 */
+        }
+        header {
+            background-color: #87cefa; /* 浅天空蓝 */
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #1e90ff; /* 道奇蓝 */
+        }
+        .profile {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: #e0ffff; /* 灯芯绒 */
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        article {
+            background: #f0ffff; /* 爱丽丝蓝 */
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #87cefa;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+            font-size: 0.9em;
+        }
+        #time {
+            text-align: center;
+            font-size: 18px;
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>欢迎来到我的app主页</h1>
+    </header>
+    <main>
+        <section class="profile">
+            <img src="profile.jpg" alt="我的头像"> <!-- 你可以放一张你的照片 -->
+            <h2>我的名字是HSA</h2>
+            <p>我是一个坤坤，我喜欢学习新事物！</p>
+        </section>
+        <section class="about-me">
+            <h2>关于我</h2>
+            <p>我喜欢阅读、绘画和玩电脑游戏。</p>
+        </section>
+        <section class="skills">
+            <h2>我的技能</h2>
+            <ul>
+                <li>阅读</li>
+                <li>绘画</li>
+                <li>电脑游戏</li>
+            </ul>
+        </section>
+        <section class="experience">
+            <h2>我的经历</h2>
+            <article>
+                <h3>学校活动</h3>
+                <p>我参加了学校的科学展览和艺术比赛。</p>
+            </article>
+        </section>
+        <div class="container">
+            <h1>点击赞助</h1>
+            <a href="https://1310hsah.github.io/gw" target="_blank" class="button">赞助</a>
+        </div>
+        <div id="time"></div>
+    </main>
+    <footer>
+        <p>app版权所有 &copy; 2025 HSA</p>
+    </footer>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('time').textContent = `当前时间：${timeString}`;
+        }
+        setInterval(updateTime, 1000);
+        updateTime(); // 初始化时立即显示时间
+    </script>
+</body>
+</html>
